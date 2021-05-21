@@ -1,0 +1,30 @@
+def flatten_list(_2d_list):
+    flat_list = []
+    # Iterate through the outer list
+    for element in _2d_list:
+        if type(element) is not list :
+            flat_list.append(element)
+                
+        else:
+            for item in element :
+                
+                if type(item) is list :
+                    for item2 in item :
+                        if type(item2) is not list:
+                            flat_list.append(item2)
+                        else :
+                            if type(item2) is list:
+                                for item3 in item2 :
+                                    flat_list.append(item3)
+                            
+
+
+                else: 
+                    flat_list.append(item)
+               
+            
+    return flat_list
+
+nested_list = [[1,'a',['cat'],2],[[[3]],'dog'],4,5]
+print('Original List', nested_list)
+print('Transformed Flat List', flatten_list(nested_list))
