@@ -1,0 +1,12 @@
+def reversed2(normal_list) :
+    reverse_list =[]
+    for i in normal_list :
+        i.sort()
+        i.reverse()
+        reverse_list.append(i)
+    reverse_list.reverse()
+    return reverse_list
+        
+normal_list = [[1, 2], [3, 4], [5, 6, 7]]
+print(f'Original List {normal_list}')
+print(f'Reversed List {reversed2(normal_list)}')   
